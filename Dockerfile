@@ -3,7 +3,7 @@ FROM  debian:stretch-slim
 ENV   TS_VERSION=3.5.0  \
       TS_SHA256SUM="9bd56e115afea19351a6238a670dc93e365fe88f8a6c28b5b542ef6ae2ca677e" \
       TS_FILENAME=teamspeak3-server_linux_amd64 \
-      TS_HOME=/teamspeak
+      TS_HOME=/teamspeak \
 	  TS3SERVER_LICENSE=accept
 
 RUN   apt-get update && apt-get install curl mysql-common bzip2 locales locales-all -y \
