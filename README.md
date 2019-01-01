@@ -44,7 +44,6 @@ Now you should see information like this:
 ```
 
 ## Start the teamspeak server with a Database
-```
 
 ### Docker-Compose
 
