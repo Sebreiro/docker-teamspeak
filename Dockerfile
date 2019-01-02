@@ -1,7 +1,6 @@
 FROM  debian:stretch-slim
 
-ENV   TS_VERSION=3.5.1  \
-      TS_SHA256SUM="9bd56e115afea19351a6238a670dc93e365fe88f8a6c28b5b542ef6ae2ca677e" \
+ENV   TS_VERSION=3.5.1  \      
       TS_FILENAME=teamspeak3-server_linux_amd64 \
       TS_HOME=/teamspeak \
 	  TS3SERVER_LICENSE=accept
@@ -15,8 +14,7 @@ ENV LANGUAGE en_US.UTF-8
 
 WORKDIR ${TS_HOME}
 
-RUN     curl -sSLo "/tmp/$TS_FILENAME.tar.gz" "http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" \
-        && echo "${TS_SHA256SUM}  /tmp/$TS_FILENAME.tar.gz" | sha256sum -c \
+RUN     curl -sSLo "/tmp/$TS_FILENAME.tar.gz" "http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" \        
         && tar -xjf "/tmp/$TS_FILENAME.tar.gz" \
         && rm /tmp/$TS_FILENAME.tar.gz \
         && mv ${TS_FILENAME}/* ${TS_HOME} \
