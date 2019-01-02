@@ -12,7 +12,7 @@ A docker container to running a teamspeak server with a SQLite database or a MyS
 Run the Teamspeak Server with a SQLite Database.
 
 ```
-docker run -d --name="teamspeak_server" -p "9987:9987/udp" -p 10011:10011 -p 30033:30033 sebreiro/teamspeak:3.5.0 
+docker run -d --name="teamspeak_server" -p "9987:9987/udp" -p 10011:10011 -p 30033:30033 sebreiro/teamspeak:latest 
 ```
 
 ### Receiving Admin Token and Server Query Admin

@@ -2,7 +2,7 @@ version: "2"
 
 services:
   teamspeak:
-    image: sebreiro/docker-teamspeak:3.5.0
+    image: sebreiro/docker-teamspeak:3.5.1
     container_name: teamspeak
     restart: unless-stopped
     environment:
