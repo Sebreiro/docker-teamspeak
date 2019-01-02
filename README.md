@@ -46,7 +46,28 @@ Now you should see information like this:
 ## Start the teamspeak server with a Database
 
 ### Docker-Compose
-
+```
+services:
+  teamspeak:
+    image: sebreiro/docker-teamspeak:3.5.0
+    container_name: teamspeak
+    restart: unless-stopped
+    environment:
+     - TS3_MARIADB_DB=teamspeak
+     - TS3_MARIADB_USER=admin
+     - TS3_MARIADB_PASS=password
+     - TS3_MARIADB_HOST=db
+     - TS3_MARIADB_PORT=3306
+     - DB_CLIENT_KEEP_DAYS=90
+     - LOG_APPEND=1     
+    volumes:
+       - /teamspeak/teamspeak/logs:/teamspeak/logs
+       - /teamspeak/teamspeak/files:/teamspeak/files
+    ports:
+      - 9987:9987/udp
+      - 30033:30033
+      - 10011:10011        
+```
 
 
 ## Available Environment Variables
