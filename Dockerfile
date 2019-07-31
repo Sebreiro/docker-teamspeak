@@ -14,7 +14,7 @@ ENV LANGUAGE en_US.UTF-8
 
 WORKDIR ${TS_HOME}
 
-RUN     curl -sSLo "/tmp/$TS_FILENAME.tar.gz" "http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" \        
+RUN     curl -sSLo "/tmp/$TS_FILENAME.tar.gz" "https://files.teamspeak-services.com/releases/server/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" \        
         && tar -xjf "/tmp/$TS_FILENAME.tar.gz" \
         && rm /tmp/$TS_FILENAME.tar.gz \
         && mv ${TS_FILENAME}/* ${TS_HOME} \
