@@ -1,8 +1,6 @@
 docker-teamspeak
 ==================
 
-## Current Version: 3.5.1
-
 ## Introduction
 
 A docker container to running a teamspeak server with a SQLite database or a MySQL/MariaDB Database.
@@ -49,7 +47,7 @@ Now you should see information like this:
 ```
 services:
   teamspeak:
-    image: sebreiro/docker-teamspeak:3.5.0
+    image: sebreiro/docker-teamspeak:latest
     container_name: teamspeak
     restart: unless-stopped
     environment:
