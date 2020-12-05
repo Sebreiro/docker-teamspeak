@@ -1,6 +1,6 @@
 FROM  debian:stretch-slim
 
-ENV   TS_VERSION=3.12.1  \      
+ENV   TS_VERSION=3.13.2  \      
       TS_FILENAME=teamspeak3-server_linux_amd64 \
       TS_HOME=/teamspeak \
 	  TS3SERVER_LICENSE=accept
